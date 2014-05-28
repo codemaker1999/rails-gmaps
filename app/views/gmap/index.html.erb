@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Data Layer: Simple</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <style>
       html, body, #map-canvas {
         height:  <%= @height %>px;
@@ -17,7 +17,8 @@ function initialize() {
   // Create a simple map.
   map = new google.maps.Map(document.getElementById('map-canvas'), {
     zoom: 4,
-    center: {lat: <%= @lat %>, lng: <%= @lng %>}
+    center: {lat: <%= @lat %>, lng: <%= @lng %>},
+    disableDefaultUI: true,
   });
 }
 
